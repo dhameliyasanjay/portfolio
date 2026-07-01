@@ -12,6 +12,44 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// ---- Theme Toggle ----
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const themeToggleMobile = document.getElementById('themeToggleMobile');
+const themeIconMobile = document.getElementById('themeIconMobile');
+
+const moonSVG = `<path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>`;
+const sunSVG = `<path d="M12 3a1 1 0 011 1v1a1 1 0 11-2 0V4a1 1 0 011-1zm0 15a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm9-9a1 1 0 110 2h-1a1 1 0 110-2h1zM4 12a1 1 0 110 2H3a1 1 0 110-2h1zm14.243-5.757a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM7.879 17.536a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zm9.9 1.414a1 1 0 01-1.414 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM6.464 6.464a1 1 0 01-1.414 0l-.707-.707A1 1 0 015.757 4.343l.707.707a1 1 0 010 1.414zM12 7a5 5 0 110 10A5 5 0 0112 7z"/>`;
+
+function applyTheme(isLight) {
+  if (isLight) {
+    document.body.classList.add('light-mode');
+  } else {
+    document.body.classList.remove('light-mode');
+  }
+  if (themeIcon) themeIcon.innerHTML = isLight ? moonSVG : sunSVG;
+  if (themeIconMobile) themeIconMobile.innerHTML = isLight ? moonSVG : sunSVG;
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light-mode');
+    applyTheme(isLight);
+  });
+}
+if (themeToggleMobile) {
+  themeToggleMobile.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light-mode');
+    applyTheme(isLight);
+  });
+}
+
+
+
+
+
+
+
 // ---- Mobile hamburger menu ----
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
