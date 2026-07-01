@@ -151,23 +151,53 @@ window.addEventListener('scroll', () => {
 // ---- Contact form ----
 function handleSubmit(e) {
   e.preventDefault();
+  const form = document.getElementById('contactForm');
   const btn = document.getElementById('submitBtn');
   const name = document.getElementById('name').value;
 
   btn.textContent = 'Sending...';
   btn.disabled = true;
 
-  setTimeout(() => {
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  fetch("https://formsubmit.co/ajax/dhameliyasanjay1995@gmail.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: json
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then(data => {
     btn.textContent = `✅ Sent! Thanks ${name}`;
     btn.style.background = '#34d399';
-    document.getElementById('contactForm').reset();
+    form.reset();
 
     setTimeout(() => {
       btn.textContent = 'Send Message 🚀';
       btn.style.background = '';
       btn.disabled = false;
-    }, 3000);
-  }, 1500);
+    }, 4000);
+  })
+  .catch(error => {
+    console.error("Error submitting form:", error);
+    btn.textContent = '❌ Error! Try Again';
+    btn.style.background = '#f87171';
+
+    setTimeout(() => {
+      btn.textContent = 'Send Message 🚀';
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 4000);
+  });
 }
 
 // ---- Smooth hero stats counter ----
