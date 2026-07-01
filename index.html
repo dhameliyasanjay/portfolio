@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjay Dhameliya | Senior Laravel Full Stack Developer</title>
+  <meta name="description" content="Senior Laravel Full Stack Developer with 3+ years experience in SaaS, APIs & Scalable Web Applications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo"><img class="dot" src="images/s1.png" alt="SD" /><span ></span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="Sanjay dhameliya.pdf" target="_blank" class="btn-resume">Resume</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-greeting reveal">👋 Hello, I'm</p>
+      <h1 class="hero-name reveal">Sanjay Dhameliya</h1>
+      <h2 class="hero-role reveal">
+        <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-desc reveal">
+        Results-driven Full Stack Laravel Developer with <strong>3+ years</strong> of experience building scalable SaaS platforms, REST APIs, and enterprise-grade web applications.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-secondary">Hire Me</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years Exp.</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Projects</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">Major SaaS</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span></span>
+      <p>Scroll Down</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Get To Know</p>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <div class="about-avatar">
+            <div class="avatar-inner">
+              <img src="images/s1.png" alt="Sanjay Dhameliya" class="avatar-img" />
+            </div>
+          </div>
+          <div class="about-socials">
+            <a href="https://github.com/dhameliyasanjay" target="_blank" class="social-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/sanjay-dhameliya-6986aa106" target="_blank" class="social-link" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:dhameliyasanjay1995@gmail.com" class="social-link" title="Email">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <p>Results-driven <strong>Full Stack Laravel Developer</strong> with 3+ years of experience in designing, developing, and maintaining scalable web applications and enterprise-grade solutions.</p>
+          <p>Strong expertise in <strong>PHP, Laravel, RESTful API development, JavaScript, MySQL</strong>, and modern frontend technologies. Experienced in backend architecture, third-party integrations, authentication systems, queue workers, caching strategies, and Linux server deployment.</p>
+          <p>Proven ability to deliver secure, high-performance, and user-centric solutions for both <strong>startups and enterprise clients</strong>.</p>
+          <div class="about-cards">
+            <div class="about-card">
+              <span class="about-card-icon">🎓</span>
+              <div>
+                <strong>B.Sc. Degree</strong>
+                <p>Indus University, Ahmedabad<br/>2015 – 2018</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <span class="about-card-icon">📜</span>
+              <div>
+                <strong>Diploma</strong>
+                <p>Sir Bhavsinhji Polytechnic, Bhavnagar<br/>2011 – 2014</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">What I Know</p>
+        <h2 class="section-title">Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title"><span class="skill-icon">🎨</span> Frontend</h3>
+          <div class="skill-tags">
+            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span>
+            <span class="tag">Sass</span><span class="tag">Tailwind CSS</span><span class="tag">Blade</span>
+            <span class="tag">AJAX</span><span class="tag">jQuery</span><span class="tag">Alpine.js</span>
+            <span class="tag">Inertia.js</span><span class="tag">React.js</span><span class="tag">Vibe Coding</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title"><span class="skill-icon">⚙️</span> Backend</h3>
+          <div class="skill-tags">
+            <span class="tag tag-green">Laravel</span><span class="tag tag-green">OOP PHP</span>
+            <span class="tag tag-green">REST APIs</span><span class="tag tag-green">MVC Architecture</span>
+            <span class="tag tag-green">Repository Pattern</span><span class="tag tag-green">Queue Workers</span>
+            <span class="tag tag-green">Auth / RBAC</span><span class="tag tag-green">WebSockets</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title"><span class="skill-icon">🗄️</span> Database</h3>
+          <div class="skill-tags">
+            <span class="tag tag-orange">MySQL</span><span class="tag tag-orange">Query Optimization</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title"><span class="skill-icon">🚀</span> DevOps & Tools</h3>
+          <div class="skill-tags">
+            <span class="tag tag-purple">Git</span><span class="tag tag-purple">Linux Deployment</span>
+            <span class="tag tag-purple">Stripe</span><span class="tag tag-purple">PayPal</span>
+            <span class="tag tag-purple">Razorpay</span><span class="tag tag-purple">PHPUnit</span>
+            <span class="tag tag-purple">Filament</span><span class="tag tag-purple">Sanctum</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title"><span class="skill-icon">🤝</span> Soft Skills</h3>
+          <div class="skill-tags">
+            <span class="tag tag-pink">Problem Solving</span><span class="tag tag-pink">Team Collaboration</span>
+            <span class="tag tag-pink">Client Communication</span><span class="tag tag-pink">Project Planning</span>
+            <span class="tag tag-pink">Debugging</span><span class="tag tag-pink">Time Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">My Journey</p>
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>Senior Laravel Full Stack Developer</h3>
+              <span class="timeline-badge">3+ Years</span>
+            </div>
+            <p class="timeline-company">🏢 Enterprise & SaaS Clients</p>
+            <ul class="timeline-list">
+              <li>Built SaaS platforms with subscription billing (Stripe, PayPal, Razorpay)</li>
+              <li>Implemented secure REST APIs with token auth, RBAC, 2FA & webhooks</li>
+              <li>Developed LMS, matrimony platforms, media production management systems</li>
+              <li>Created multi-role dashboards, queue workers, and analytics modules</li>
+              <li>Linux server deployment, performance optimization, PHPUnit testing</li>
+              <li>Worked on 20+ projects including Skillbloomer, Perksweet, Divyabhaskar</li>
+            </ul>
+            <div class="timeline-tech">
+              <span>Laravel</span><span>PHP</span><span>MySQL</span><span>React</span><span>Tailwind</span><span>REST API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">What I've Built</p>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon">📧</div>
+            <div class="project-links">
+              <a href="https://github.com/dhameliyasanjay" target="_blank" class="proj-link">GitHub ↗</a>
+            </div>
+          </div>
+          <h3>Email Verification SaaS Platform</h3>
+          <p>Laravel-based SaaS platform for email verification & subscription management with Admin/User dashboards, billing workflows, and multi-gateway payments.</p>
+          <ul class="project-features">
+            <li>✅ Subscription plans with Stripe, PayPal & Razorpay</li>
+            <li>✅ REST APIs with token auth & webhooks</li>
+            <li>✅ RBAC, 2FA security & support ticketing</li>
+          </ul>
+          <div class="project-tech">
+            <span>Laravel</span><span>PHP</span><span>MySQL</span><span>Stripe</span><span>REST API</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon">🎓</div>
+            <div class="project-links">
+              <a href="https://github.com/dhameliyasanjay" target="_blank" class="proj-link">GitHub ↗</a>
+            </div>
+          </div>
+          <h3>Online Learning Platform (LMS)</h3>
+          <p>Modular LMS built on Laravel 12 (PHP 8.2) with courses, workshops, certificates, blog and 8+ payment gateways. Multi-role system for Student, Instructor & Admin.</p>
+          <ul class="project-features">
+            <li>✅ E-commerce cart, checkout & invoice system</li>
+            <li>✅ Real-time support via WebSockets/Pusher</li>
+            <li>✅ Quizzes, Q&A, progress tracking & certificates</li>
+          </ul>
+          <div class="project-tech">
+            <span>Laravel 12</span><span>Alpine.js</span><span>Tailwind</span><span>Filament</span><span>Vite</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon">🎬</div>
+            <div class="project-links">
+              <a href="https://github.com/dhameliyasanjay" target="_blank" class="proj-link">GitHub ↗</a>
+            </div>
+          </div>
+          <h3>Backstage – Media Production System</h3>
+          <p>Comprehensive video production management platform for media & entertainment industry. Manages full lifecycle from client onboarding to post-production & distribution.</p>
+          <ul class="project-features">
+            <li>✅ Full HR, finance & invoicing management</li>
+            <li>✅ Sales pipeline & strategic partnerships</li>
+            <li>✅ Internal collaboration & communication tools</li>
+          </ul>
+          <div class="project-tech">
+            <span>Laravel</span><span>MySQL</span><span>REST API</span><span>Queue Workers</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon">💍</div>
+            <div class="project-links">
+              <a href="https://github.com/dhameliyasanjay" target="_blank" class="proj-link">GitHub ↗</a>
+            </div>
+          </div>
+          <h3>Svamatrimony – Sri Vaishnava Matrimony</h3>
+          <p>Full-stack NRI-focused matrimony platform for Sri Vaishnava community with matchmaking, OTP auth, photo handling, subscriptions and admin panel.</p>
+          <ul class="project-features">
+            <li>✅ Weighted compatibility scoring & matching</li>
+            <li>✅ OTP authentication (SMS + Email)</li>
+            <li>✅ Admin panel with analytics & SEO settings</li>
+          </ul>
+          <div class="project-tech">
+            <span>Laravel</span><span>React 18</span><span>TypeScript</span><span>Tailwind v4</span><span>Livewire</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Recognition</p>
+        <h2 class="section-title">Achievements</h2>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-card reveal">
+          <div class="achievement-icon">🏆</div>
+          <h3>Best Employee Award</h3>
+          <p class="achievement-year">2025</p>
+          <p>Recognized for outstanding performance, dedication, and contribution to the team.</p>
+        </div>
+        <div class="achievement-card reveal">
+          <div class="achievement-icon">👨‍🏫</div>
+          <h3>Best Teacher Award</h3>
+          <p class="achievement-year">2024</p>
+          <p>Awarded for exceptional mentorship and teaching skills in web development.</p>
+        </div>
+        <div class="achievement-card reveal">
+          <div class="achievement-icon">🚀</div>
+          <h3>20+ Projects Delivered</h3>
+          <p class="achievement-year">2022 – Present</p>
+          <p>Successfully delivered projects including Skillbloomer, Perksweet, Divyabhaskar, and more.</p>
+        </div>
+        <div class="achievement-card reveal">
+          <div class="achievement-icon">🛒</div>
+          <h3>E-Commerce & Inventory Expert</h3>
+          <p class="achievement-year">Enterprise Level</p>
+          <p>Built multiple e-commerce and inventory management systems for real clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Get In Touch</p>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's Work Together!</h3>
+          <p>I'm open to freelance projects, full-time roles, and exciting collaborations. Feel free to reach out!</p>
+          <div class="contact-items">
+            <a href="mailto:dhameliyasanjay1995@gmail.com" class="contact-item">
+              <span class="contact-item-icon">📧</span>
+              <div>
+                <strong>Email</strong>
+                <p>dhameliyasanjay1995@gmail.com</p>
+              </div>
+            </a>
+            <a href="tel:+917698885509" class="contact-item">
+              <span class="contact-item-icon">📱</span>
+              <div>
+                <strong>Phone</strong>
+                <p>+91 7698885509</p>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/sanjay-dhameliya-6986aa106" target="_blank" class="contact-item">
+              <span class="contact-item-icon">💼</span>
+              <div>
+                <strong>LinkedIn</strong>
+                <p>sanjay-dhameliya-6986aa106</p>
+              </div>
+            </a>
+            <a href="https://github.com/dhameliyasanjay" target="_blank" class="contact-item">
+              <span class="contact-item-icon">🐙</span>
+              <div>
+                <strong>GitHub</strong>
+                <p>github.com/dhameliyasanjay</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Project Discussion" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full" id="submitBtn">Send Message 🚀</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & Built by <strong>Sanjay Dhameliya</strong> ❤️</p>
+      <p class="footer-sub">Senior Laravel Full Stack Developer</p>
+      <div class="footer-socials">
+        <a href="https://github.com/dhameliyasanjay" target="_blank">GitHub</a>
+        <span>·</span>
+        <a href="https://www.linkedin.com/in/sanjay-dhameliya-6986aa106" target="_blank">LinkedIn</a>
+        <span>·</span>
+        <a href="mailto:dhameliyasanjay1995@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
