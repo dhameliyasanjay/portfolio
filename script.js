@@ -231,4 +231,19 @@ const statsObserver = new IntersectionObserver((entries) => {
 const heroStats = document.querySelector('.hero-stats');
 if (heroStats) statsObserver.observe(heroStats);
 
+// ---- Resume click handler (Open + Download) ----
+const resumeBtn = document.querySelector('.nav-links .btn-resume[href="resume/index.html"]');
+if (resumeBtn) {
+  resumeBtn.addEventListener('click', (e) => {
+    // Create temporary link to trigger download of the PDF file
+    const tempLink = document.createElement('a');
+    tempLink.href = 'Sanjay Dhameliya New.pdf';
+    tempLink.download = 'Sanjay_Dhameliya_Resume.pdf';
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    document.body.removeChild(tempLink);
+  });
+}
+
 console.log('🚀 Portfolio of Sanjay Dhameliya Loaded!');
+

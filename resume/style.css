@@ -1,0 +1,571 @@
+/* ==========================================================================
+   RESUME STYLESHEET (V2 - Dhruvin Style)
+   Sanjay Dhameliya | Senior Laravel Developer
+   ========================================================================== */
+
+:root {
+  --primary: #1e293b;        /* Dark Slate */
+  --primary-light: #475569;
+  --accent: #2563eb;         /* Accent Blue */
+  --accent-light: #eff6ff;   /* Light Blue Tint */
+  --accent-border: #bfdbfe;
+  --accent-text: #1d4ed8;
+  --bg-sidebar: #f8fafc;     /* Clean light-grey sidebar background */
+  --bg-content: #ffffff;
+  --text-dark: #0f172a;      /* Slate-900 */
+  --text-body: #334155;      /* Slate-700 */
+  --text-muted: #64748b;     /* Slate-500 */
+  --border: #e2e8f0;         /* Slate-200 */
+  
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #f1f5f9;
+  color: var(--text-body);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Print/Download Button */
+.print-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 100;
+  transition: all 0.2s ease-in-out;
+}
+
+.print-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+}
+
+.print-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Resume Page A4 Wrapper */
+.resume-page {
+  width: 210mm;
+  height: 297mm;
+  margin: 40px auto;
+  background-color: var(--bg-content);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   LEFT SIDEBAR (32% width)
+   ========================================================================== */
+.sidebar {
+  width: 31%;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Profile Photo */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3.5px solid var(--accent);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar Section Standard Layout */
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 4px;
+  margin-bottom: 2px;
+}
+
+/* Contact Info list */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.contact-item a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.contact-item a:hover {
+  color: var(--accent);
+}
+
+.contact-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Skills Badges (Chips) */
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+
+.skill-category-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.skill-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  background-color: var(--accent-light);
+  color: var(--accent-text);
+  border: 1px solid var(--accent-border);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Achievements List */
+.achievements-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.achievements-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.achievement-icon {
+  font-size: 0.95rem;
+  margin-top: 1px;
+}
+
+.achievement-text strong {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.achievement-text p {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* Languages */
+.languages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.lang-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  background-color: #f1f5f9;
+  color: var(--primary-light);
+  border: 1px solid var(--border);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   RIGHT MAIN CONTENT (68% width)
+   ========================================================================== */
+.main-content {
+  width: 69%;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--bg-content);
+}
+
+/* Header Area styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.candidate-name {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.candidate-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.candidate-tagline {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* QR Code styling */
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--border);
+  padding: 6px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.qr-image {
+  width: 62px;
+  height: 62px;
+}
+
+.qr-label {
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Main Section Titles */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1.2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--border);
+}
+
+/* Professional Summary Text */
+.summary-text {
+  font-size: 0.78rem;
+  color: var(--text-body);
+  text-align: justify;
+}
+
+/* Work Experience items styling */
+.job-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.job-role {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.job-duration {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.job-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.job-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 2px;
+}
+
+.job-bullets li {
+  font-size: 0.74rem;
+  line-height: 1.35;
+  position: relative;
+  padding-left: 12px;
+}
+
+.job-bullets li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+/* Projects Card Section styling */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-name {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.project-link-icon svg {
+  width: 11px;
+  height: 11px;
+  color: var(--accent);
+  vertical-align: middle;
+  transition: transform 0.15s ease;
+}
+
+.project-link-icon:hover svg {
+  transform: scale(1.2);
+}
+
+.project-desc {
+  font-size: 0.68rem;
+  color: var(--text-body);
+  line-height: 1.3;
+}
+
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 2px;
+}
+
+.project-tech-tags span {
+  font-size: 0.62rem;
+  font-weight: 600;
+  background-color: #f1f5f9;
+  color: var(--primary-light);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* Education items styling */
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.edu-degree {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.edu-date {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.edu-inst {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Achievements items styling */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.achievement-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.achievement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.achievement-name {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.achievement-date {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.achievement-desc {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+
+/* ==========================================================================
+   PRINT MEDIA QUERIES
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4;
+    margin: 0; /* Removes default headers (date, title) and footers (URL, page numbers) */
+  }
+  body {
+    background-color: #fff;
+    color: #000;
+    padding: 0;
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print-btn {
+    display: none !important;
+  }
+
+  .resume-page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+}
