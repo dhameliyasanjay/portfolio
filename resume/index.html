@@ -9,6 +9,151 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== EXPERIENCE TIMELINE GRID (4 columns, 1 row) ===== */
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+      position: relative;
+    }
+    /* horizontal connector line behind cards */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 28px;
+      right: 28px;
+      height: 2px;
+      background: linear-gradient(90deg, #6c63ff 0%, #a78bfa 50%, #c4b5fd 100%);
+      border-radius: 2px;
+      z-index: 0;
+    }
+    .timeline-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      z-index: 1;
+    }
+    .timeline-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: #fff;
+      border: 2px solid #6c63ff;
+      box-shadow: 0 2px 8px rgba(108,99,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      margin-bottom: 6px;
+    }
+    .timeline-logo img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    .timeline-logo .logo-initials {
+      font-size: 11px;
+      font-weight: 800;
+      color: #6c63ff;
+      letter-spacing: -0.5px;
+    }
+    .timeline-content {
+      background: #fafafa;
+      border: 1px solid #ede9fe;
+      border-radius: 10px;
+      padding: 8px 8px 7px 8px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .timeline-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      width: 100%;
+    }
+    .timeline-role {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #1e1b4b;
+      margin: 0;
+      line-height: 1.3;
+      text-align: center;
+    }
+    .timeline-duration {
+      font-size: 8.5px;
+      font-weight: 600;
+      color: #6c63ff;
+      background: #ede9fe;
+      border-radius: 20px;
+      padding: 2px 6px;
+      white-space: nowrap;
+    }
+    .timeline-company {
+      font-size: 9px;
+      color: #4b5563;
+      margin: 3px 0 1px 0;
+      font-weight: 500;
+      text-align: center;
+    }
+    .timeline-meta {
+      font-size: 8px;
+      color: #9ca3af;
+      margin: 0;
+      text-align: center;
+      line-height: 1.4;
+    }
+    @media print {
+      .timeline::before { background: #6c63ff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .timeline-content { background: #fafafa !important; border-color: #ede9fe !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .timeline-duration { background: #ede9fe !important; color: #6c63ff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    /* ===== ACHIEVEMENTS SIDEBAR ===== */
+    .achievements-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .achievement-sidebar-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+    }
+    .achievement-icon {
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .achievement-sidebar-name {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 2px 0;
+      line-height: 1.3;
+    }
+    .achievement-sidebar-meta {
+      font-size: 0.68rem;
+      color: #2563eb;
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 600;
+    }
+    .achievement-sidebar-desc {
+      font-size: 0.68rem;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.35;
+    }
+  </style>
 </head>
 <body>
 
@@ -26,7 +171,7 @@
       
       <!-- Profile Photo -->
       <div class="profile-container">
-        <img src="../images/s1.png" alt="Sanjay Dhameliya" class="profile-img">
+        <!-- <img src="../images/s1.png" alt="Sanjay Dhameliya" class="profile-img"> -->
       </div>
 
       <!-- Contact Info -->
@@ -140,6 +285,29 @@
         </div>
       </section>
 
+      <!-- Achievements -->
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">ACHIEVEMENTS</h2>
+        <div class="achievements-sidebar">
+          <div class="achievement-sidebar-item">
+            <span class="achievement-icon">🏆</span>
+            <div>
+              <h4 class="achievement-sidebar-name">Best Employee Award</h4>
+              <span class="achievement-sidebar-meta">2025 &middot; PlusInfoLab</span>
+              <p class="achievement-sidebar-desc">Outstanding technical contribution &amp; leadership.</p>
+            </div>
+          </div>
+          <div class="achievement-sidebar-item">
+            <span class="achievement-icon">🏆</span>
+            <div>
+              <h4 class="achievement-sidebar-name">Best Teacher Award</h4>
+              <span class="achievement-sidebar-meta">2024 &middot; Abcoding IT</span>
+              <p class="achievement-sidebar-desc">Exceptional mentorship &amp; full-stack teaching skills.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </aside>
 
     <!-- RIGHT MAIN CONTENT -->
@@ -172,7 +340,8 @@
       <!-- WORK EXPERIENCE -->
       <section class="main-section">
         <h3 class="section-title">WORK EXPERIENCE</h3>
-        
+
+        <!-- Original PlusInfoLab Job Entry -->
         <div class="job-item">
           <div class="job-header">
             <h4 class="job-role">Senior Laravel Full Stack Developer</h4>
@@ -183,7 +352,7 @@
             <span class="job-projects-count">Delivered 20+ projects</span>
           </div>
           <div class="job-meta">
-            <span class="job-company">Enterprise & SaaS Clients (Freelance / Contract)</span>
+            <span class="job-company">Enterprise &amp; SaaS Clients (Freelance / Contract)</span>
           </div>
         </div>
 
@@ -198,7 +367,78 @@
           </ul>
         </div>
 
+        <!-- Company Timeline (logo + role + duration only) -->
+        <div class="timeline">
 
+          <!-- PlusInfoLab -->
+          <div class="timeline-item">
+            <!-- <div class="timeline-logo">
+              <img src="https://logo.clearbit.com/plusinfolab.com" alt="PlusInfoLab"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="logo-initials" style="display:none">PI</span>
+            </div> -->
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4 class="timeline-role">Senior Laravel Full Stack Developer</h4>
+                <span class="timeline-duration">Apr 2025 – Present</span>
+              </div>
+              <p class="timeline-company">PlusInfoLab &middot; Full-time</p>
+              <p class="timeline-meta"> Hybrid &middot; 1 yr 4 mos</p>
+            </div>
+          </div>
+
+          <!-- Abcoding IT Institute Academy -->
+          <div class="timeline-item">
+            <!-- <div class="timeline-logo">
+              <img src="https://logo.clearbit.com/abcoding.in" alt="ABCoding"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="logo-initials" style="display:none">AB</span>
+            </div> -->
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4 class="timeline-role">Academic Administrator</h4>
+                <span class="timeline-duration">Apr 2023 – Mar 2025</span>
+              </div>
+              <p class="timeline-company">Abcoding IT Institute</p>
+              <p class="timeline-meta">On-site &middot; 2 yrs</p>
+            </div>
+          </div>
+
+          <!-- Vibramade -->
+          <div class="timeline-item">
+            <!-- <div class="timeline-logo">
+              <img src="https://logo.clearbit.com/vibramade.com" alt="Vibramade"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="logo-initials" style="display:none">VM</span>
+            </div> -->
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4 class="timeline-role">Web Developer</h4>
+                <span class="timeline-duration">May 2022 – Mar 2023</span>
+              </div>
+              <p class="timeline-company">Vibramade &middot; Full-time</p>
+              <p class="timeline-meta">On-site &middot; 11 mos</p>
+            </div>
+          </div>
+
+          <!-- BVM Infotech -->
+          <div class="timeline-item">
+            <!-- <div class="timeline-logo">
+              <img src="https://logo.clearbit.com/bvminfotech.com" alt="BVM Infotech"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="logo-initials" style="display:none">BVM</span>
+            </div> -->
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4 class="timeline-role">Junior Software Engineer</h4>
+                <span class="timeline-duration">May 2021 – Apr 2022</span>
+              </div>
+              <p class="timeline-company">BVM Infotech &middot;</p>
+              <p class="timeline-meta">On-site &middot; 1 yr</p>
+            </div>
+          </div>
+
+        </div>
       </section>
 
       <!-- PROJECTS -->
@@ -255,7 +495,7 @@
               <span>Laravel</span>
               <span>MySQL</span>
               <span>Queue Workers</span>
-              <span>REST API</span>
+              <span> API</span>
             </div>
           </div>
 
@@ -272,7 +512,7 @@
               <span>Laravel</span>
               <span>React 18</span>
               <span>TypeScript</span>
-              <span>Tailwind v4</span>
+              <span>Tailwind</span>
             </div>
           </div>
 
@@ -285,7 +525,7 @@
         <div class="education-grid">
           <div class="education-item">
             <div class="edu-header">
-              <h4 class="edu-degree">Bachelor's Degree in Technology</h4>
+              <h4 class="edu-degree">B.Tech</h4>
               <span class="edu-date">2014 – 2017</span>
             </div>
             <p class="edu-inst">Indus University, Ahmedabad</p>
@@ -300,26 +540,6 @@
         </div>
       </section>
 
-      <!-- ACHIEVEMENTS -->
-      <section class="main-section">
-        <h3 class="section-title">ACHIEVEMENTS</h3>
-        <div class="achievements-grid">
-          <div class="achievement-item">
-            <div class="achievement-header">
-              <h4 class="achievement-name">🏆 Best Employee Award</h4>
-              <span class="achievement-date">2025</span>
-            </div>
-            <p class="achievement-desc">Recognized for outstanding technical contribution & leadership in web development.</p>
-          </div>
-          <div class="achievement-item">
-            <div class="achievement-header">
-              <h4 class="achievement-name">🏆 Best Teacher Award</h4>
-              <span class="achievement-date">2024</span>
-            </div>
-            <p class="achievement-desc">Awarded for exceptional mentorship and teaching skills in full-stack engineering.</p>
-          </div>
-        </div>
-      </section>
 
     </main>
 
